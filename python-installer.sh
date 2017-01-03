@@ -43,6 +43,7 @@ then
     else
         yum -y groupinstall "Development tools"
         yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel gcc wget
+        yum -y install epel-release
         cd /usr/src
         wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tgz
         tar xzf Python-2.7.10.tgz
