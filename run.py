@@ -20,13 +20,13 @@ while choose != "3":
     choose = raw_input("  Please choose the installation option: ")
     print('')
     if choose == "1":
-        subprocess.call("python install.py", shell=True)
+        subprocess.call("`pwd`/install.py", shell=True)
         #print("Fail2ban successfully installed and configured!!!")
         print("")
         print("")
     elif choose == "2":
         print("")
-        subprocess.call("python listunban.py", shell=True)
+        subprocess.call("`pwd`/listunban.py", shell=True)
         print("")
         print("")
     elif choose == "3":
