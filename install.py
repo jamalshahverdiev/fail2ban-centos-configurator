@@ -1,7 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 import sys
 import os
-import jinja2
 from termcolor import colored, cprint
 from fabric.api import *
 from fabric.tasks import execute
