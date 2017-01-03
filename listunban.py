@@ -60,9 +60,11 @@ with settings(hide('warnings', 'running', 'stdout', 'stderr'), warn_only=True):
             ipf2blist = run('fail2ban-client status '+jailname+' | grep '+ipfromlist+' | awk \'{ print $2 }\'')
 
             if iptablist == ipfromlist and ipf2blist == 'Banned':
-                print(ipfromlist+' '+ipaddress+' is not '+successfully+' deleted from'+jailname+' jail list')
+                print('')
+                print(ipfromlist+' '+ipaddress+' is not '+successfully+' deleted from'+jailname+' jail list!')
             else:
-                print(ipfromlist+' '+ipaddress+' is '+successfully+' deleted from '+jailname+' jail list')
+                print('')
+                print(ipfromlist+' '+ipaddress+' is '+successfully+' deleted from '+jailname+' jail list!')
 
         elif f2banbin != '/usr/bin/fail2ban-server' and f2banpidfile != f2banpid:
             print(' '+fail2ban+' is not installed and running on this server...')
