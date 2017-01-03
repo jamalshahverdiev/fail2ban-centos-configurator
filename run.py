@@ -21,7 +21,6 @@ while choose != "3":
     print('')
     if choose == "1":
         subprocess.call("`pwd`/install.py", shell=True)
-        #print("Fail2ban successfully installed and configured!!!")
         print("")
         print("")
     elif choose == "2":
