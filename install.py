@@ -51,11 +51,13 @@ def f2bancopyandstart(servicename):
 def f2banconfiger(iptab, firewd):
     if lintype == 'CentOS' and getcosver == '6':
         print(''+centos+' version is "6" !!!')
+        run('yum -y install epel-release')
         run('yum -y install fail2ban')
         run('chkconfig '+iptab+' on ; service '+iptab+' start')
         f2bancopyandstart(f2banservc)
     elif lintype == 'CentOS' and getcosver == '7':
         print(''+centos+' version is "7" !!!')
+        run('yum -y install epel-release')
         run('yum -y install fail2ban fail2ban-systemd')
         run('systemctl enable '+firewd+' ; systemctl start '+firewd+'')
         f2bancopyandstart(f2banservc)

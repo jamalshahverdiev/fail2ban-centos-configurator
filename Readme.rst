@@ -21,7 +21,7 @@ Usage
 
 The purpose of this scripts is to show how to automatically install/configure Fail2ban the and unban IP address from Jail list.
 
-Each time script will give menu to choose what you want and must do.
+Each time script will give menu to choose what you want and must do. Scripts is supposed SeLinux is disabled.
 
 In a Linux desktop terminal execute the following command to download codes:
 
