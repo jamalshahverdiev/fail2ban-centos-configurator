@@ -6,10 +6,12 @@ FVER=`uname -r | cut -f1 -d'.'`
 if [ "$OSBSD" == "FreeBSD" ] && [ "$FVER" = "10" ]
 then
     if [ -f /usr/local/bin/python3.4 ] && [ -f /usr/local/bin/python2.7 ]
-     then
-         echo "You have installed Python2.7 and Python3.4"
-         exit 0
+    then
+        echo "This is FreeBSD server!!!"
+        echo "You have installed Python2.7 and Python3.4"
+        exit 0
     else
+        echo "This is FreeBSD server!!!" 
         /usr/sbin/pkg install -y bash vim bash-completion
         /usr/sbin/pkg install -y python27 python34
         /usr/local/bin/python3.4 -m ensurepip
@@ -26,21 +28,23 @@ then
         /usr/local/bin/python2.7 -m pip install pexpect
         /usr/local/bin/python2.7 -m pip install Jinja2
         /usr/local/bin/python2.7 -m pip install termcolor
+        echo "******************************************************"
+        echo "Python2.7 and Python3.4 is installed with libraries!!!"
+        echo "******************************************************"
     fi
 else
-    echo "****************************"
-    echo "This is not FreeBSD server"
-    echo "****************************"
     echo -e "\n"
 fi
 
 if [ -f /etc/issue ] && [ -f /etc/redhat-release ]
 then
     if [ -f /usr/local/bin/python3.4 ] && [ -f /usr/local/bin/python2.7 ]
-     then
-         echo "You have installed Python2.7 and Python3.4"
-         exit 0
+    then
+        echo "This is CentOS server!!!"
+        echo "You have installed Python2.7 and Python3.4"
+        exit 0
     else
+        echo "This is CentOS server!!!"
         yum -y groupinstall "Development tools"
         yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel gcc wget
         yum -y install epel-release
@@ -73,10 +77,10 @@ then
         /usr/local/bin/python2.7 -m pip install pexpect
         /usr/local/bin/python2.7 -m pip install Jinja2
         /usr/local/bin/python2.7 -m pip install termcolor
+        echo "******************************************************"
+        echo "Python2.7 and Python3.4 is installed with libraries!!!"
+        echo "******************************************************"
     fi
 else
-    echo "****************************"
-    echo "This is not CentOS server"
-    echo "****************************"
     echo -e "\n"
 fi
